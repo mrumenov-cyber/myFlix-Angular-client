@@ -15,12 +15,22 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { MovieViewComponent } from './movie-view/movie-view.component';
+import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { DirectorViewComponent } from './director-view/director-view.component';
+import { GenreViewComponent } from './genre-view/genre-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    MovieViewComponent,
+    ProfileViewComponent,
+    MovieCardComponent,
+    DirectorViewComponent,
+    GenreViewComponent
   ],
   imports: [
     BrowserModule,
