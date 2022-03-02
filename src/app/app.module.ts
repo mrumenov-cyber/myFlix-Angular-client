@@ -20,6 +20,18 @@ import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { DirectorViewComponent } from './director-view/director-view.component';
 import { GenreViewComponent } from './genre-view/genre-view.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInput } from '@angular/material/input';
+import { MatButton } from '@angular/material/button';
+
+const appRoutes: Routes = [
+  { path: 'welcome', component: WelcomePageComponent },
+  { path: 'movies', component: MovieCardComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+  { path: 'profile', component: ProfileViewComponent }
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +42,8 @@ import { GenreViewComponent } from './genre-view/genre-view.component';
     ProfileViewComponent,
     MovieCardComponent,
     DirectorViewComponent,
-    GenreViewComponent
+    GenreViewComponent,
+    WelcomePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +57,11 @@ import { GenreViewComponent } from './genre-view/genre-view.component';
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    RouterModule.forRoot(appRoutes),
+    MatIconModule,
+    MatInput,
+    MatButton
   ],
   providers: [],
   bootstrap: [AppComponent]
