@@ -5,7 +5,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog'
 @Component({
   selector: 'app-genre-view',
   templateUrl: './genre-view.component.html',
-  styleUrls: ['./genre-view.component.css']
+  styleUrls: ['./genre-view.component.scss']
 })
 export class GenreViewComponent implements OnInit {
   /**
