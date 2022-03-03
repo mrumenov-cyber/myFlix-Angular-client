@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { FetchApiDataService } from '../fetch-api-data.service';
+// You'll use this import to close the dialog on success
+import { MAT_DIALOG_DATA } from '@angular/material/dialog'
+
 
 @Component({
   selector: 'app-director-view',
@@ -6,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./director-view.component.css']
 })
 export class DirectorViewComponent implements OnInit {
+  constructor(
+    public fetchApiData: FetchApiDataService,
+    @Inject(MAT_DIALOG_DATA)
+    public data: {
+      name: string;
+      bio: string;
+      birthdate: Date;
+    }
+  ) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
