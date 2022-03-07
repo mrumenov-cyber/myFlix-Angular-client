@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-movie-view',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+
+    /**
+     * Uses Inject to get the movie details from the movie object
+     */
+    @Inject(MAT_DIALOG_DATA)
+    public data: {
+      Title: string,
+      ImagePath: any,
+      Description: string,
+      Genre: string
+    }
+  ) { }
 
   ngOnInit(): void {
   }
