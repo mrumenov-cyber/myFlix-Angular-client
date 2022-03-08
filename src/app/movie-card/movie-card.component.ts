@@ -128,3 +128,4 @@ export class MovieCardComponent implements OnInit {
   }
 
 }
+
