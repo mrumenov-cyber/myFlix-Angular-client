@@ -10,24 +10,29 @@
         All Movies
       </a>
     </mat-list-item>
-    <mat-list-item routerLinkActive="active current">
-      <a 
-        matLine 
-        routerLink="profile" 
-        (click)="goToProfilePage()" 
-        style="margin-right: 15px; text-decoration: none;"
-      >
-        My Profile
-      </a>
-    </mat-list-item>
-    <mat-list-item routerLinkActive="active current">
-      <a 
-        matLine 
-        routerLink="logout" 
-        (click)="logout()"
-        style="text-decoration: none;"
-      >
-        LOGOUT
-      </a>
-    </mat-list-item>
+
+    <span class="spacer"></span>
+
+    <div class="profile-logout-position">
+      <mat-list-item routerLinkActive="active current">
+        <a 
+          matLine 
+          routerLink="profile" 
+          (click)="goToProfilePage()" 
+          style="margin-right: 15px; text-decoration: none;"
+        >
+          My Profile
+        </a>
+      </mat-list-item>
+      <mat-list-item routerLinkActive="active current">
+        <a 
+          matLine 
+          routerLink="logout" 
+          (click)="logout()"
+          style="text-decoration: none;"
+        >
+          LOGOUT
+        </a>
+      </mat-list-item>
+    </div>
   </mat-toolbar>

@@ -20,6 +20,6 @@ export class GenreViewComponent implements OnInit {
       description: string;
     }
   ) {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }

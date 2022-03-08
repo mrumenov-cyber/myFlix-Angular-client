@@ -43,8 +43,8 @@ export class MovieCardComponent implements OnInit {
    */
   getFavs(): void {
     this.fetchApiData.getUserProfile().subscribe((resp: any) => {
-      this.favs = resp.FavoriteMovies;
-      console.log(this.favs);
+      this.favs = resp.FavouriteMovies;
+      console.log("HELLO THIS FAVS", this.favs);
       return this.favs;
     });
   }
@@ -87,9 +87,9 @@ export class MovieCardComponent implements OnInit {
   openDirector(name: string, bio: string, birth: string): void {
     this.dialog.open(DirectorViewComponent, {
       data: {
-        Name: name,
-        Bio: bio,
-        Birth: birth,
+        name,
+        bio,
+        birthdate: birth,
       },
       width: '500px'
     });
@@ -101,10 +101,11 @@ export class MovieCardComponent implements OnInit {
    * @param description 
    */
   openGenre(name: string, description: string): void {
+    alert(name)
     this.dialog.open(GenreViewComponent, {
       data: {
-        Name: name,
-        Description: description,
+        name,
+        description,
       },
       width: '500px'
     });

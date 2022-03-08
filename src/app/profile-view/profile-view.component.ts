@@ -54,7 +54,7 @@ export class ProfileViewComponent implements OnInit {
   getFavs(): void {
     this.fetchApiData.getAllMovies().subscribe((res: any) => {
       this.favs = res.filter((movie: any) => {
-        return this.user.FavoriteMovies.includes(movie._id)
+        return this.user.FavouriteMovies.includes(movie._id)
       });
       console.log(this.favs);
       return this.favs;
