@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<div class="all-movies-container" style="display: flex;">
+    <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
+        <div class="single-movie-container">
+            <mat-card-header class="title">
+            <mat-card-title>{{movie.Title}}</mat-card-title>
+                <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
+            </mat-card-header>
+            <br>
+            <img src={{movie.ImagePath}} alt= {{movie.Title}} width="320px" margin="10px"/>
+            <div class="heart">
+                <mat-icon *ngIf="!isFavorited(movie._id)" (click)='handleFavorite(movie._id)' class="heart-icon">
+                  favorite_border
+                </mat-icon>
+                <mat-icon *ngIf="isFavorited(movie._id)" (click)="handleUnfavorite(movie._id)" class="heart-icon">
+                  favorite
+                </mat-icon>
+              </div>
+            <br>
+            <br>
+            <div class="button-container">
+                <mat-card-actions>
+                    <button
+                        mat-button
+                        (click)="openGenre(movie.Genre.Name, movie.Genre.Description)" 
+                        class="genre-button"
+                    >
+                        Genre
+                    </button>
+                    <button
+                        mat-button
+                        class="director-button"
+                        (click)="openDirector(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)" 
+                    >
+                        Director
+                    </button>
+                    <button
+                        mat-button
+                        class="movie-details-button"
+                        (click)="openMovieView(movie.Title, movie.ImagePath, movie.Description)" 
+                    >
+                        Movie Details
+                    </button>
+                    
+                    <br>
+                    <br>
+                </mat-card-actions>
+            </div>
+        </div>
+    </mat-card>
+</div>
+

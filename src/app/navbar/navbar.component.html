@@ -1,0 +1,39 @@
+<mat-toolbar class="nav">
+    <img src="" class="logo">
+    <mat-list-item routerLinkActive="active current">
+      <a 
+        matLine 
+        routerLink="movies" 
+        class = "myFlix-button"
+        (click)="goToMoviesPage()" 
+        style="margin-left: 25px; text-decoration: none;"
+      >
+        MyFlix Movies
+      </a>
+    </mat-list-item>
+
+    <span class="spacer"></span>
+
+      <mat-list-item routerLinkActive="active current">
+        <a 
+          matLine 
+          routerLink="profile"
+          class="profile-button" 
+          (click)="goToProfilePage()" 
+          style="margin-right: 25px; text-decoration: none;"
+        >
+          My Profile
+        </a>
+      </mat-list-item>
+      <mat-list-item routerLinkActive="active current">
+        <a 
+          matLine 
+          routerLink="logout"
+          class="logout-button"  
+          (click)="logout()"
+          style="text-decoration: none; margin-right: 25px;"
+        >
+          LOGOUT
+        </a>
+      </mat-list-item>
+  </mat-toolbar>

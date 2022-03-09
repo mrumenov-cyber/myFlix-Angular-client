@@ -15,12 +15,39 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { MovieViewComponent } from './movie-view/movie-view.component';
+import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { DirectorViewComponent } from './director-view/director-view.component';
+import { GenreViewComponent } from './genre-view/genre-view.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+
+
+const appRoutes: Routes = [
+  { path: 'welcome', component: WelcomePageComponent },
+  { path: 'movies', component: MovieCardComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+  { path: 'profile', component: ProfileViewComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    MovieViewComponent,
+    ProfileViewComponent,
+    MovieCardComponent,
+    DirectorViewComponent,
+    GenreViewComponent,
+    WelcomePageComponent,
+    NavbarComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +61,10 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    RouterModule.forRoot(appRoutes),
+    MatIconModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
