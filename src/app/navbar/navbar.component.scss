@@ -7,13 +7,14 @@
     color: white;
     font-size: medium;
   }
-  
-  .logo {
-    height: 55px;
+
+
+  .profile-button:hover, .logout-button:hover, .myFlix-button:hover {
+    color: lightgreen;
+    font-size: large;
+    transition-duration: 2s;
   }
 
-  .profile-logout-position{
-    flex: right;
-    justify-content: right;
-    justify-items: flex-end;
+  .spacer {
+    flex: 1 1 auto;
   }

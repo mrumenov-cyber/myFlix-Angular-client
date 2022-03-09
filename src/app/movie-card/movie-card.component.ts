@@ -101,7 +101,6 @@ export class MovieCardComponent implements OnInit {
    * @param description 
    */
   openGenre(name: string, description: string): void {
-    alert(name)
     this.dialog.open(GenreViewComponent, {
       data: {
         name,

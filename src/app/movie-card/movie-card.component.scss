@@ -53,3 +53,17 @@
 .title{
   margin-bottom: auto;
 }
+
+.button-container{
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.genre-button:hover, .director-button:hover, .movie-details-button:hover{
+  color: lightgreen;
+  background-color: black;
+  width:9vw;
+  transition: 3s;
+}

@@ -4,22 +4,23 @@
       <a 
         matLine 
         routerLink="movies" 
+        class = "myFlix-button"
         (click)="goToMoviesPage()" 
-        style="margin-right: 15px; text-decoration: none;"
+        style="margin-left: 25px; text-decoration: none;"
       >
-        All Movies
+        MyFlix Movies
       </a>
     </mat-list-item>
 
     <span class="spacer"></span>
 
-    <div class="profile-logout-position">
       <mat-list-item routerLinkActive="active current">
         <a 
           matLine 
-          routerLink="profile" 
+          routerLink="profile"
+          class="profile-button" 
           (click)="goToProfilePage()" 
-          style="margin-right: 15px; text-decoration: none;"
+          style="margin-right: 25px; text-decoration: none;"
         >
           My Profile
         </a>
@@ -27,12 +28,12 @@
       <mat-list-item routerLinkActive="active current">
         <a 
           matLine 
-          routerLink="logout" 
+          routerLink="logout"
+          class="logout-button"  
           (click)="logout()"
-          style="text-decoration: none;"
+          style="text-decoration: none; margin-right: 25px;"
         >
           LOGOUT
         </a>
       </mat-list-item>
-    </div>
   </mat-toolbar>
