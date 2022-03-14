@@ -1,3 +1,15 @@
+# Description
+MyFlix Movies interface created in Angular for the Movies Api (https://github.com/mrumenov-cyber/Movie_API)
+
+# WebSite
+https://mrumenov-cyber.github.io/myFlix-Angular-client/welcome
+
+# App Screenshots
+![ScreenShot](https://github.com/mrumenov-cyber/Pokedex-app/blob/main/static/img/Screenshot1.png "Screenshot 1")
+![ScreenShot](https://github.com/mrumenov-cyber/Pokedex-app/blob/main/static/img/Screenshot2.png "Screenshot 2")
+![ScreenShot](https://github.com/mrumenov-cyber/Pokedex-app/blob/main/static/img/Screenshot3.png "Screenshot 3")
+
+
 # MyFlixAngularClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
