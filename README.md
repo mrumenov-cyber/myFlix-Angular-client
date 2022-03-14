@@ -1,7 +1,7 @@
 # Description
 MyFlix Movies interface created in Angular for the Movies Api (https://github.com/mrumenov-cyber/Movie_API)
 
-# WebSite
+# Demo website
 https://mrumenov-cyber.github.io/myFlix-Angular-client/welcome
 
 # App Screenshots
